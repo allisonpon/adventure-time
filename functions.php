@@ -169,7 +169,7 @@ function add_current_location($wp_customize) {
 
 function adventure_time_jetpack_support(){
     // Declaring site logo support
-    add_image_size( 'site-logo', 0, 100 );
+    add_image_size( 'site-logo', 250, 0 );
     add_theme_support( 'site-logo', array(
         'header-text' => array(
             'site-title',

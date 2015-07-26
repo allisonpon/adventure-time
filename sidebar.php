@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <div id="secondary" class="widget-area" role="complementary">
-  <div class="site-logo">
+  <div class="site-logo-box">
     <?php 
       if ( function_exists( 'jetpack_the_site_logo' ) ) {
           jetpack_the_site_logo();
