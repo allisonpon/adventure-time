@@ -27,7 +27,6 @@ function adventure_time_custom_header_setup() {
 		'default-text-color'     => '000000',
 		'width'                  => 1280,
 		'height'                 => 640,
-		'flex-height'            => true,
 		'wp-head-callback'       => 'adventure_time_header_style',
 		'admin-head-callback'    => 'adventure_time_admin_header_style',
 		'admin-preview-callback' => 'adventure_time_admin_header_image',
