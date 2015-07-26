@@ -525,6 +525,10 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+  background-color: #39B54A;
+  color: white;
+  margin-top: -7px;
+  text-align: center;
 
 }
 
@@ -970,10 +974,19 @@ object {
   margin: 0 0 0 25%;
 }
 
+.site-content {
+  position: relative;
+}
+
 .site-content .widget-area {
   float: left;
   overflow: hidden;
   width: 25%;
+  background-color: #1C6882;
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 .site-footer {
@@ -1020,56 +1033,43 @@ object {
   color: #113516;
 }
 
-#secondary {
-  background-color: #1C6882;
-  color: white;
-}
-
-#secondary .site-logo-box {
+.site-content .widget-area .site-logo-box {
   text-align: center;
   padding: 1em;
 }
 
-#secondary .widget {
+.site-content .widget-area .widget {
   margin: 0 0 1.5em;
 }
 
-#secondary h2 {
+.site-content .widget-area h2 {
   background-color: #39B54A;
   padding: 0.5em 1em;
   color: #113E4E;
 }
 
-#secondary ul {
+.site-content .widget-area ul {
   list-style-type: none;
   margin-left: 1em;
   padding: 0.5em 1em;
 }
 
-#secondary form {
+.site-content .widget-area form {
   text-align: center;
 }
 
-#secondary form input {
+.site-content .widget-area form input {
   width: 90%;
 }
 
-#secondary a {
+.site-content .widget-area a {
   color: white;
   text-decoration: underline;
 }
 
-#secondary a:hover, #secondary a:active, #secondary a:active {
-  color: #74CB80;
+.site-content .widget-area a:hover, .site-content .widget-area a:active, .site-content .widget-area a:active {
+  color: #39B54A;
   text-decoration: underline;
-}
-
-
-#site-navigation {
-  background-color: #39B54A;
-  color: white;
-  margin-top: -7px;
-  text-align: center;
 }
 
 .fixed-nav {
