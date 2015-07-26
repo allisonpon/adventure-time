@@ -152,7 +152,6 @@ svg:not(:root) {
 
 figure {
   margin: 0;
-	padding: 1em 40px;
 }
 
 hr {
@@ -496,17 +495,17 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #39B54A;
 }
 
 a:visited {
-	color: purple;
+	color: #39B54A;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #287F34;
 }
 
 a:focus {
@@ -630,7 +629,7 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
+	margin: 1em;
 	overflow: hidden;
 }
 
@@ -756,10 +755,12 @@ a:active {
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
+  border: 5px solid #B53959 !important;
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 1em;
+  border: 2px solid #1C6882;
 }
 
 .byline,
@@ -775,12 +776,62 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
+}
+
+.entry-header .entry-title {
+  margin: 0 0 0.5em 0 ;
+}
+
+.entry-header .entry-meta {
+  text-align: right;
+}
+
+.entry-header a, .entry-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.entry-header a:hover, .entry-header a:focus, .entry-header a:active, 
+.entry-footer a:hover, .entry-footer a:focus, .entry-footer a:active  {
+  color: #39B54A;
+  text-decoration: underline;
+}
+
+.entry-content {
+  margin: 1em;
+}
+
+.entry-header {
+  background-color: #1C6882;
+  color: white;
+  padding: 0.5em;
+}
+
+.entry-footer {
+  background-color: #1C6882;
+  color: white;
+  padding: 0.5em;
+  text-align: right;
+}
+
+.sticky .entry-header {
+  background-color: #B53959 !important;
+  color: white;
+  padding: 0.5em;
+}
+
+.sticky .entry-footer {
+  background-color: #B53959 !important;
+  color: white;
+  padding: 0.5em;
+  text-align: right;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+  float: right;
 }
 
 /*--------------------------------------------------------------
@@ -971,7 +1022,7 @@ object {
 
 #secondary {
   background-color: #1C6882;
-  color: #77A4B4;
+  color: white;
 }
 
 #secondary .site-logo-box {
@@ -984,7 +1035,7 @@ object {
 }
 
 #secondary h2 {
-  background-color: #77A4B4;
+  background-color: #39B54A;
   padding: 0.5em 1em;
   color: #113E4E;
 }
@@ -1005,11 +1056,11 @@ object {
 
 #secondary a {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-#secondary a:hover, #secondary a:active {
-  color: white;
+#secondary a:hover, #secondary a:active, #secondary a:active {
+  color: #74CB80;
   text-decoration: underline;
 }
 
@@ -1019,4 +1070,37 @@ object {
   color: white;
   margin-top: -7px;
   text-align: center;
+}
+
+.fixed-nav {
+  position: fixed;
+}
+
+.site-footer {
+  background-color: #39B54A;
+  color: white;
+  padding: 0.5em;
+}
+
+.site-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.site-footer .site-info {
+  float: right;
+}
+
+.cat-links, .tags-links, .edit-link {
+  margin: 0em 0em 0em 0.5em;
+}
+
+.more-link {
+  float: right;
+  margin: 0 0 1.5em;
 }
