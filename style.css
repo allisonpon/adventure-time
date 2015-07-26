@@ -151,7 +151,8 @@ svg:not(:root) {
 }
 
 figure {
-	margin: 1em 40px;
+  margin: 0;
+	padding: 1em 40px;
 }
 
 hr {

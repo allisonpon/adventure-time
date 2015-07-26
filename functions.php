@@ -148,3 +148,21 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Custom field to add status
+ */
+add_action('customize_register', 'add_current_location');
+function add_current_location($wp_customize) {
+
+ $wp_customize->add_setting( 'current_location', array(
+ 'default' => '',
+ 'capability' => 'edit_theme_options'
+ ) );
+
+ $wp_customize->add_control( 'current_location', array(
+ 'label' => 'Current Location',
+ 'section' => 'title_tagline',
+ 'type' => 'text'
+ ) );
+}
