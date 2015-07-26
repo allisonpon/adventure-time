@@ -36,6 +36,7 @@
 
   $(window).bind('resize', function(){
     bindScroll();
+    $(".header-box").style("height", "100vh");
   });
 
 } )( jQuery );

@@ -45,6 +45,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+# Constants
+--------------------------------------------------------------*/
+
+/* AT_GREEN: #39B54A;
+   AT_DARK_GREEN: #226D2C;
+   AT_LIGHT_GREEN: #88D392; 
+   AT_PINK: #B53959;
+*/
+
+/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 html {
@@ -523,10 +533,17 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
-  background-color: #39B54A;
+  background-color: #B53959;
   color: white;
   text-align: center;
 
+}
+
+.main-navigation div {
+  padding: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .main-navigation ul {
@@ -539,6 +556,13 @@ a:active {
 .main-navigation li {
 	display: inline-block;
 	position: relative;
+  border-radius: 5px;
+}
+
+.main-navigation .nav-menu > li.menu-item-has-children {
+  display: inline-block;
+  position: relative;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .main-navigation a {
@@ -571,22 +595,45 @@ a:active {
 .main-navigation ul ul li {
   text-align: left;
   padding: 0.5em 1em;
-  background-color: white;
+  background-color: #39B54A;
+  border-radius: 0px;
+}
+
+.main-navigation ul ul ul li:first-child {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.main-navigation ul ul li:first-child {
+  border-top-right-radius: 5px;
+}
+
+.main-navigation ul ul li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.main-navigation .sub-menu li:hover,
+.main-navigation .sub-menu li:focus {
+  background-color: #88D392;
+}
+
+.main-navigation .sub-menu li:hover a,
+.main-navigation .sub-menu li:focus a {
+  color: #226D2C;
 }
 
 .main-navigation ul ul a {
 	width: 200px;
-  color: #113516;
+  color: white;
 }
 
 .main-navigation li:hover,
 .main-navigation li.focus {
-  background-color: #88D392;
+  background-color: #39B54A;
 }
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
-  color: #113516;
+  color: white;
 }
 
 .main-navigation ul ul :hover > a,
@@ -750,13 +797,19 @@ a:active {
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
-	display: block;
+	display: block !important;
   border: 5px solid #B53959 !important;
+  width: auto !important;
+  margin: 1em !important;
 }
 
 .hentry {
 	margin: 1em;
   border: 2px solid #1C6882;
+  background-color: white;
+  width: 30%;
+  display: inline-block;
+  vertical-align: top
 }
 
 .byline,
@@ -960,25 +1013,11 @@ object {
 
 .site-content {
   position: relative;
-}
-
-.site-content .widget-area {
-  float: left;
-  overflow: hidden;
-  width: 25%;
-  background-color: #1C6882;
-  color: white;
-  min-height: 100vh;
+  text-align: center;
 }
 
 .site-content .content-area {
-  position: absolute;
-  margin: 0 0 0 25%;
-  top: 0;
-  bottom: 0;
-  overflow-y: scroll;
-  float: right;
-  width: 75%;
+  width: 100%%;
 }
 
 .site-footer {
@@ -989,6 +1028,10 @@ object {
 /*--------------------------------------------------------------
 ## Custom
 --------------------------------------------------------------*/
+.site-logo-box {
+  display: inline-block;
+}
+
 .site-branding {
   position: relative;
 }
@@ -1026,45 +1069,6 @@ object {
   color: #113516;
   font-weight: normal;
   margin: 0;
-}
-
-.site-content .widget-area .site-logo-box {
-  text-align: center;
-  padding: 1em;
-}
-
-.site-content .widget-area .widget {
-  margin: 0 0 1.5em;
-}
-
-.site-content .widget-area h2 {
-  background-color: #39B54A;
-  padding: 0.5em 1em;
-  color: #113E4E;
-}
-
-.site-content .widget-area ul {
-  list-style-type: none;
-  margin-left: 1em;
-  padding: 0.5em 1em;
-}
-
-.site-content .widget-area form {
-  text-align: center;
-}
-
-.site-content .widget-area form input {
-  width: 90%;
-}
-
-.site-content .widget-area a {
-  color: white;
-  text-decoration: underline;
-}
-
-.site-content .widget-area a:hover, .site-content .widget-area a:active, .site-content .widget-area a:active {
-  color: #39B54A;
-  text-decoration: underline;
 }
 
 .site-content .comments-area {
@@ -1116,7 +1120,7 @@ object {
 }
 
 .padded-body {
-  margin-top: 40px;
+  margin-top: 116px;
 }
 
 /*--------------------------------------------------------------
@@ -1143,9 +1147,13 @@ object {
   .site-branding .site-description {
     font-size: 30px;
   }
-
   .site-branding .site-location {
     font-size: 14px;
+  }
+  .hentry {
+    display: block !important;
+    width: auto !important;
+    margin: 1em !important;
   }
 }
 
