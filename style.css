@@ -526,6 +526,7 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+
 }
 
 .main-navigation ul {
@@ -536,12 +537,12 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
+	display: inline-block;
 	position: relative;
 }
 
 .main-navigation a {
-	display: block;
+	display: inline-block;
 	text-decoration: none;
 }
 
@@ -549,7 +550,7 @@ a:active {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 2.5em;
 	left: -999em;
 	z-index: 99999;
 }
@@ -559,16 +560,33 @@ a:active {
 	top: 0;
 }
 
-.main-navigation ul ul a {
-	width: 200px;
+.main-navigation ul li {
+  padding: 0.5em 1em;
+}
+
+.main-navigation ul a {
+  color: white;
 }
 
 .main-navigation ul ul li {
+  text-align: left;
+  padding: 0.5em 1em;
+  background-color: white;
+}
 
+.main-navigation ul ul a {
+	width: 200px;
+  color: #113516;
+}
+
+.main-navigation li:hover,
+.main-navigation li.focus {
+  background-color: #88D392;
 }
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
+  color: #113516;
 }
 
 .main-navigation ul ul :hover > a,
@@ -581,7 +599,7 @@ a:active {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+	left: 0em;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -907,4 +925,54 @@ object {
 .site-footer {
   clear: both;
   width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+## Custom
+--------------------------------------------------------------*/
+.site-branding {
+  position: relative;
+}
+
+.site-branding .header-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.site-branding .header-box .header-text{
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.site-branding .site-description {
+  font-size: 50px;
+  margin-bottom: 0.5em;
+}
+
+.site-branding .site-location {
+  font-size: 20px;
+  background-color: rgba(255,255,255,0.8);
+  display: inline-block;
+  padding: 0em 0.5em;
+  border-radius: 10px;
+  color: #113516;
+}
+
+.site-logo {
+
+}
+
+#site-navigation {
+  background-color: #39B54A;
+  color: white;
+  margin-top: -7px;
+  text-align: center;
 }

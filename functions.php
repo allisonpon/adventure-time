@@ -166,3 +166,16 @@ function add_current_location($wp_customize) {
  'type' => 'text'
  ) );
 }
+
+function adventure_time_jetpack_support(){
+    // Declaring site logo support
+    add_image_size( 'site-logo', 0, 100 );
+    add_theme_support( 'site-logo', array(
+        'header-text' => array(
+            'site-title',
+            'site-description'
+        ),
+        'size' => 'site-logo',
+    ));
+}
+add_action( 'after_setup_theme', 'adventure_time_jetpack_support' );
