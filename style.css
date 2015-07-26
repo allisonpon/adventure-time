@@ -527,7 +527,6 @@ a:active {
 	width: 100%;
   background-color: #39B54A;
   color: white;
-  margin-top: -7px;
   text-align: center;
 
 }
@@ -964,15 +963,6 @@ object {
 /*--------------------------------------------------------------
 ## Structure
 --------------------------------------------------------------*/
-.content-area {
-  float: right;
-  margin: 0 0 0 -25%;
-  width: 100%;
-}
-
-.site-main {
-  margin: 0 0 0 25%;
-}
 
 .site-content {
   position: relative;
@@ -984,9 +974,17 @@ object {
   width: 25%;
   background-color: #1C6882;
   color: white;
+  min-height: 100vh;
+}
+
+.site-content .content-area {
   position: absolute;
+  margin: 0 0 0 25%;
   top: 0;
   bottom: 0;
+  overflow-y: scroll;
+  float: right;
+  width: 75%;
 }
 
 .site-footer {
@@ -1000,6 +998,10 @@ object {
 --------------------------------------------------------------*/
 .site-branding {
   position: relative;
+}
+
+.site-branding img {
+  margin-bottom: -7px;
 }
 
 .site-branding .header-box {
