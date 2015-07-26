@@ -122,6 +122,8 @@ function adventure_time_scripts() {
 
   wp_enqueue_script( 'adventure-time-navbar', get_template_directory_uri() . '/js/navbar.js', array(), false, true );
 
+  wp_enqueue_script( 'adventure-time-parallax', get_template_directory_uri() . '/js/parallax.min.js', array(), false, true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

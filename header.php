@@ -26,11 +26,10 @@
 		<?php if ( is_front_page() && is_home()) : ?>
       <div class="site-branding">
         <?php if ( get_header_image() ) : ?>
-          <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-          <div class="header-box">
+          <div class="header-box" data-parallax="scroll" data-image-src="<?php header_image(); ?>">
             <div class="header-text">
-              <div class="site-description"><?php bloginfo( 'description' ); ?></div>
-              <div class="site-location">Currently: <?php echo get_theme_mod("current_location"); ?></div>
+              <h1 class="site-description"><?php bloginfo( 'description' ); ?></h1>
+              <h3 class="site-location">Currently: <?php echo get_theme_mod("current_location"); ?></h3>
             </div>
           </div>
         <?php endif; // End header image check. ?>

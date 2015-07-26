@@ -6,10 +6,10 @@
 ( function( $ ) {
 
   function bindScroll() {
-    if ($('.site-branding')) {
-    var navpos = $('.site-branding').offset().top + $('.site-branding').height();
+    if ( $('.site-branding').length > 0 ) {
+      var navpos = $('.site-branding').offset().top + $('.site-branding').height();
     } else {
-      bindScroll(0);
+      var navpos = $('.main-navigation').offset().top;
     }
     if ($(window).scrollTop() > navpos) {
       $('.main-navigation').addClass('fixed');
