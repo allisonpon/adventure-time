@@ -679,6 +679,7 @@ a:active {
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
+  text-align: left;
 	float: left;
 	width: 50%;
 }
@@ -800,7 +801,7 @@ a:active {
 	display: block !important;
   border: none !important;
   width: auto !important;
-  margin: 1em !important;
+  margin: 1.5em !important;
 }
 
 .hentry {
@@ -809,7 +810,8 @@ a:active {
   background-color: white;
   width: 30%;
   display: inline-block;
-  vertical-align: top
+  vertical-align: top;
+  position: relative;
 }
 
 .byline,
@@ -825,33 +827,46 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1em;
+	margin: 0em;
 }
 
 .entry-header .entry-title {
-  margin: 0 0 0.5em 0 ;
+  margin: 0;
 }
 
 .entry-header .entry-meta {
   text-align: right;
 }
 
-.entry-header a, .entry-footer a {
-  color: white;
-  text-decoration: underline;
+.entry-header .entry-meta a {
+  text-decoration: none;
 }
 
-.entry-header a:hover, .entry-header a:focus, .entry-header a:active, 
-.entry-footer a:hover, .entry-footer a:focus, .entry-footer a:active  {
+.entry-header a, .entry-header a:hover, .entry-header a:focus, .entry-header a:active {
   color: #39B54A;
   text-decoration: underline;
 }
 
-.entry-header {
-  background-color: #1C6882;
+.entry-footer a, .entry-footer a:hover, .entry-footer a:focus, .entry-footer a:active {
   color: white;
+  text-decoration: underline;
+}
+
+.entry-header {
   padding: 0.5em;
-  position: absolute;
+}
+
+.entry-title a, .entry-title a:hover, .entry-title a:focus {
+  color: #B53959;
+}
+
+.entry-content img.attachment-post-thumb {
+  height: 200px;
+  width: auto;
+}
+
+.entry-content p {
+  margin: 0em 0.5em 1em 0.5em;
 }
 
 .entry-footer {
@@ -862,6 +877,18 @@ a:active {
   min-height: 40px;
 }
 
+.date-big {
+  background-color: #39B54A;
+  display: inline-block;
+  border-radius: 1em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  margin-left: 0.25em;
+  color: white;
+}
+
 .sticky .entry-header {
   background: transparent !important;
   color: #39B54A !important;
@@ -870,14 +897,13 @@ a:active {
   text-align: left;
   vertical-align: bottom;
   z-index: 9999;
+  position: absolute !important;
+  top: 0 !important;
 }
+
 .sticky .entry-title {
   display: inline-block;
   margin: 0em 0em 0em 1em;
-}
-
-.sticky .entry-title a {
-  color: #39B54A !important;
 }
 
 .sticky .entry-content {
@@ -896,8 +922,17 @@ a:active {
   margin: 0;
 }
 
+.entry-content p a {
+  color: #B53959;
+}
+
+.entry-content p a:hover, .entry-content p a:focus {
+  color: #C4617A;
+}
+
 .sticky .entry-content img.attachment-post-thumb {
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
 }
 
 .sticky .entry-footer {
@@ -918,14 +953,14 @@ a:active {
   text-align: center;
 }
 
-.sticky .entry-meta .posted-on{
+.sticky .entry-meta .posted-on {
   display: inline-block;
   vertical-align: middle;
   line-height: normal; 
 }
 
 .sticky .entry-meta a {
-  text-decoration: none;
+  color: white;
 }
 
 .sticky .entry-meta a:hover, 
@@ -944,9 +979,16 @@ a:active {
   color: #226D2C;
 }
 
-.sticky span.date-big {
+.sticky .date-big {
+  background: none;
   font-size: 40px;
-  display:block;
+  display: block;
+  padding: 0em;
+  border-radius: 0em;
+  margin-left: 0em;
+  line-height: 1em;
+  width: auto;
+  height: auto;
 }
 
 .page-links {
@@ -1141,7 +1183,7 @@ object {
   display: inline-block;
   padding: 0em 0.5em;
   border-radius: 10px;
-  color: #113516;
+  color: #226D2C;
   font-weight: normal;
   margin: 0;
 }
@@ -1153,10 +1195,6 @@ object {
 .site-content .comments-area .comment-respond {
   padding: 1em;
   background-color: #77A4B4;
-}
-
-.fixed-nav {
-  position: fixed;
 }
 
 .site-footer {
@@ -1179,7 +1217,7 @@ object {
   float: right;
 }
 
-.cat-links, .tags-links, .edit-link {
+.cat-links, .tags-links, .edit-link, .comments-link {
   margin: 0em 0em 0em 0.5em;
 }
 
@@ -1194,8 +1232,14 @@ object {
   z-index: 99999;
 }
 
+
+.site-logo {
+  height: 50px;
+  width: auto;
+}
+
 .padded-body {
-  margin-top: 116px;
+  margin-top: 66px;
 }
 
 /*--------------------------------------------------------------

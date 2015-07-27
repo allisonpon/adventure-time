@@ -102,7 +102,7 @@ if ( ! function_exists( 'adventure_time_posted_on_short' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function adventure_time_posted_on_short() {
-  $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s<span class="date-big">%3$s</span></time>';
+  $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s<div class="date-big">%3$s</div></time>';
 
   $time_string = sprintf( $time_string,
     esc_attr( get_the_date( 'c' ) ),
@@ -115,7 +115,7 @@ function adventure_time_posted_on_short() {
     '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
   );
 
-  echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+  echo '<div class="posted-on">' . $posted_on . '</div>'; // WPCS: XSS OK.
 
 }
 endif;
