@@ -798,7 +798,7 @@ a:active {
 --------------------------------------------------------------*/
 .sticky {
 	display: block !important;
-  border: 5px solid #B53959 !important;
+  border: none !important;
   width: auto !important;
   margin: 1em !important;
 }
@@ -851,6 +851,7 @@ a:active {
   background-color: #1C6882;
   color: white;
   padding: 0.5em;
+  position: absolute;
 }
 
 .entry-footer {
@@ -862,16 +863,90 @@ a:active {
 }
 
 .sticky .entry-header {
-  background-color: #B53959 !important;
-  color: white;
+  background: transparent !important;
+  color: #39B54A !important;
+  padding: 1em;
+  width: 100%;
+  text-align: left;
+  vertical-align: bottom;
+  z-index: 9999;
+}
+.sticky .entry-title {
+  display: inline-block;
+  margin: 0em 0em 0em 1em;
+}
+
+.sticky .entry-title a {
+  color: #39B54A !important;
+}
+
+.sticky .entry-content {
+  clear: both;
+  position: relative;
+  top: 0;
+  margin: 0em;
+}
+
+.sticky .entry-content p {
+  color: #226D2C;
   padding: 0.5em;
+  position: absolute;
+  bottom: 1.5em;
+  background-color: rgba(255,255,255,0.75);
+  margin: 0;
+}
+
+.sticky .entry-content img.attachment-post-thumb {
+  width: 100%;
 }
 
 .sticky .entry-footer {
-  background-color: #B53959 !important;
+  background-color: #39B54A !important;
   color: white;
   padding: 0.5em;
   text-align: right;
+  margin-top: -0.5em;
+}
+
+.sticky .entry-meta {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #39B54A;
+  display: inline-block;
+  line-height: 100px;
+  text-align: center;
+}
+
+.sticky .entry-meta .posted-on{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal; 
+}
+
+.sticky .entry-meta a {
+  text-decoration: none;
+}
+
+.sticky .entry-meta a:hover, 
+.sticky .entry-meta a:focus {
+  color: #226D2C;
+}
+
+.sticky .entry-meta:hover, 
+.sticky .entry-meta:focus {
+  background-color: #88D392;
+  color: #226D2C;
+}
+
+.sticky .entry-meta:hover a, 
+.sticky .entry-meta:focus a {
+  color: #226D2C;
+}
+
+.sticky span.date-big {
+  font-size: 40px;
+  display:block;
 }
 
 .page-links {
@@ -1062,7 +1137,7 @@ object {
 
 .site-branding .site-location {
   font-size: 20px;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.75);
   display: inline-block;
   padding: 0em 0.5em;
   border-radius: 10px;

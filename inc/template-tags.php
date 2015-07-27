@@ -87,12 +87,35 @@ function adventure_time_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'adventure-time' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+	// $byline = sprintf(
+	// 	esc_html_x( 'by %s', 'post author', 'adventure-time' ),
+	// 	'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	// );
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+}
+endif;
+
+if ( ! function_exists( 'adventure_time_posted_on_short' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function adventure_time_posted_on_short() {
+  $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s<span class="date-big">%3$s</span></time>';
+
+  $time_string = sprintf( $time_string,
+    esc_attr( get_the_date( 'c' ) ),
+    esc_html( get_the_date( 'M' ) ),
+    esc_html( get_the_date( 'j' ) )
+  );
+
+  $posted_on = sprintf(
+    esc_html_x( '%s', 'post date', 'adventure-time' ),
+    '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+  );
+
+  echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
