@@ -52,6 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
    AT_DARK_GREEN: #226D2C;
    AT_LIGHT_GREEN: #88D392; 
    AT_PINK: #B53959;
+   AT_DARK_PINK: #912E47;
+   AT_DARK_BLUE: #1C6882;
 */
 
 /*--------------------------------------------------------------
@@ -432,7 +434,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: #B53959;
+  background-color: #39B54A;
   border: none;
 	border-radius: 3px;
 	font-size: 14px;
@@ -447,10 +449,7 @@ input[type="submit"] {
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-  background-color: #C4617A;
-}
-
+input[type="submit"]:hover, 
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -459,8 +458,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background-color: #E5B8C3;
-  color: #B53959;
+  background-color: #226D2C;
 }
 
 input[type="text"],
@@ -536,7 +534,7 @@ a:active {
   background-color: #B53959;
   color: white;
   text-align: center;
-
+  position: relative;
 }
 
 .main-navigation div {
@@ -669,6 +667,10 @@ a:active {
   float: right;
 }
 
+.nav-links a, .nav-links a:hover, .nav-links a:focus {
+  color: white;
+}
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -676,12 +678,25 @@ a:active {
 	overflow: hidden;
 }
 
+.comment-navigation .nav-previous:hover.comment-navigation .nav-previous:focus,
+.posts-navigation .nav-previous:hover, .posts-navigation .nav-previous:focus,
+.post-navigation .nav-previous:hover, .post-navigation .nav-previous:focus,
+.comment-navigation .nav-next:hover, .comment-navigation .nav-next:focus,
+.posts-navigation .nav-next:hover, .posts-navigation .nav-next:focus,
+.post-navigation .nav-next:hover, .post-navigation .nav-next:focus {
+  background-color: #912E47;
+}
+
+
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   text-align: left;
 	float: left;
-	width: 50%;
+	max-width: 50%;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background-color: #B53959;
 }
 
 .comment-navigation .nav-next,
@@ -689,7 +704,10 @@ a:active {
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
-	width: 50%;
+	max-width: 50%;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background-color: #B53959;
 }
 
 /*--------------------------------------------------------------
@@ -797,8 +815,15 @@ a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.sticky {
+.sticky, .post-single {
 	display: block !important;
+  border: none !important;
+  width: auto !important;
+  margin: 1.5em !important;
+}
+
+article.page {
+  display: block !important;
   border: none !important;
   width: auto !important;
   margin: 1.5em !important;
@@ -832,32 +857,59 @@ a:active {
 
 .entry-header .entry-title {
   margin: 0;
+  color: #1C6882;
 }
 
 .entry-header .entry-meta {
   text-align: right;
 }
 
-.entry-header .entry-meta a {
+.entry-header .entry-meta a, .entry-header .entry-meta a:hover,
+.entry-header .entry-meta a:focus {
   text-decoration: none;
 }
 
-.entry-header a, .entry-header a:hover, .entry-header a:focus, .entry-header a:active {
+.entry-header a, .entry-header a:hover, .entry-header a:focus {
   color: #39B54A;
   text-decoration: underline;
 }
 
-.entry-footer a, .entry-footer a:hover, .entry-footer a:focus, .entry-footer a:active {
+.entry-footer a { 
   color: white;
   text-decoration: underline;
+}
+
+.single-post .entry-footer, .page .entry-footer { 
+  background-color: white;
+  color: #404040;
+}
+
+.single-post .entry-footer a, .page .entry-footer a{ 
+  color: #B53959;
+  text-decoration: underline;
+}
+
+.single-post .entry-footer a:hover, .page .entry-footer a:hover{ 
+  color: #912E47;
+  text-decoration: underline;
+}
+
+.single-post .entry-header a:hover, .single-post .entry-header a:focus, 
+.entry-footer a:hover, .entry-footer a:focus,
+.page .entry-header a:hover, .page .entry-header a:focus{
+  color: #912E47;
 }
 
 .entry-header {
   padding: 0.5em;
 }
 
-.entry-title a, .entry-title a:hover, .entry-title a:focus {
+.entry-title a {
   color: #B53959;
+}
+
+.entry-title a:hover, .entry-title a:focus {
+  color: #912E47;
 }
 
 .entry-content img.attachment-post-thumb {
@@ -867,6 +919,7 @@ a:active {
 
 .entry-content p {
   margin: 0em 0.5em 1em 0.5em;
+  text-align: left;
 }
 
 .entry-footer {
@@ -927,10 +980,11 @@ a:active {
 }
 
 .entry-content p a:hover, .entry-content p a:focus {
-  color: #C4617A;
+  color: #912E47;
 }
 
-.sticky .entry-content img.attachment-post-thumb {
+.sticky .entry-content img.attachment-post-thumb, 
+.post-single .entry-content img.attachment-post-thumb {
   width: 100% !important;
   height: auto !important;
 }
@@ -965,18 +1019,12 @@ a:active {
 
 .sticky .entry-meta a:hover, 
 .sticky .entry-meta a:focus {
-  color: #226D2C;
+  text-decoration: none;
 }
 
 .sticky .entry-meta:hover, 
 .sticky .entry-meta:focus {
-  background-color: #88D392;
-  color: #226D2C;
-}
-
-.sticky .entry-meta:hover a, 
-.sticky .entry-meta:focus a {
-  color: #226D2C;
+  background-color: #226D2C;
 }
 
 .sticky .date-big {
@@ -989,6 +1037,7 @@ a:active {
   line-height: 1em;
   width: auto;
   height: auto;
+  color: white;
 }
 
 .page-links {
@@ -1147,6 +1196,14 @@ object {
 --------------------------------------------------------------*/
 .site-logo-box {
   display: inline-block;
+  position: absolute;
+  top: -46px;
+  left: 50px;
+}
+
+.site-logo {
+  height: 100px;
+  width: auto;
 }
 
 .site-branding {
@@ -1189,12 +1246,21 @@ object {
 }
 
 .site-content .comments-area {
+  text-align: left;
   margin: 1em;
 }
 
 .site-content .comments-area .comment-respond {
   padding: 1em;
   background-color: #77A4B4;
+}
+
+.site-content .comments-area a {
+  color: #B53959;
+}
+
+.site-content .comments-area a:hover, .site-content .comments-area a:focus {
+  color: #912E47;
 }
 
 .site-footer {
@@ -1232,8 +1298,14 @@ object {
   z-index: 99999;
 }
 
+.fixed .site-logo-box {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+}
 
-.site-logo {
+.fixed  .site-logo {
   height: 50px;
   width: auto;
 }
@@ -1258,21 +1330,37 @@ object {
   .site-content .widget-area {
     display: none;
   }
+
   .site-content .content-area {
     margin: 0 !important;
     width: 100% !important;
     position: relative !important;
   }
+
   .site-branding .site-description {
     font-size: 30px;
   }
+
   .site-branding .site-location {
     font-size: 14px;
   }
+
   .hentry {
     display: block !important;
     width: auto !important;
     margin: 1em !important;
+  }
+
+  .site-logo-box {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .site-logo {
+    height: 50px;
+    width: auto;
   }
 }
 

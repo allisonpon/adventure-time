@@ -18,9 +18,9 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-    <?php if ( has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail('post-thumb'); ?>
-    <?php endif; ?>
+    <?php if ( has_post_thumbnail() ) {
+      the_post_thumbnail('post-thumb');
+    } ?>
 		<?php
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */

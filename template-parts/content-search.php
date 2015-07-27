@@ -21,6 +21,9 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
+    <?php if ( has_post_thumbnail() ) {
+      the_post_thumbnail('post-thumb');
+    } ?>
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
