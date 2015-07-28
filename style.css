@@ -598,7 +598,8 @@ a:active {
 }
 
 .main-navigation ul ul ul li:first-child {
-  border-radius: 5px 5px 0px 0px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .main-navigation ul ul li:first-child {
@@ -606,7 +607,8 @@ a:active {
 }
 
 .main-navigation ul ul li:last-child {
-  border-radius: 0px 0px 5px 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .main-navigation .sub-menu li:hover,
@@ -855,7 +857,7 @@ article.page {
 	margin: 0em;
 }
 
-.entry-header .entry-title {
+.entry-header .entry-title, .page-header .page-title {
   margin: 0;
   color: #1C6882;
 }
