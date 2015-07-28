@@ -17,7 +17,7 @@
     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content <?php if ( !has_post_thumbnail() ) : ?> missing-feature<?php endif; ?>">
     <?php if ( has_post_thumbnail() ) {
       the_post_thumbnail('post-thumb');
     } ?>

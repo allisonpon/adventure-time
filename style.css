@@ -917,8 +917,12 @@ article.page {
   width: auto;
 }
 
-.entry-content p {
+.entry-content {
   margin: 0em 0.5em 1em 0.5em;
+  text-align: center;
+}
+
+.single-post .entry-content, .entry-content p {
   text-align: left;
 }
 
@@ -964,6 +968,11 @@ article.page {
   position: relative;
   top: 0;
   margin: 0em;
+  min-height: 250px;
+}
+
+.sticky .missing-feature {
+  background-color: #88D392;
 }
 
 .sticky .entry-content p {
@@ -973,6 +982,7 @@ article.page {
   bottom: 1.5em;
   background-color: rgba(255,255,255,0.75);
   margin: 0;
+  width: 100%;
 }
 
 .entry-content p a {
@@ -1043,7 +1053,6 @@ article.page {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
-  float: right;
 }
 
 .page-header {
@@ -1173,6 +1182,11 @@ object {
 	display: block;
 }
 
+.wc-gallery-captions-onhover .gallery-caption {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #226D2C;
+}
+
 /*--------------------------------------------------------------
 ## Structure
 --------------------------------------------------------------*/
@@ -1300,9 +1314,9 @@ object {
 
 .fixed .site-logo-box {
   display: inline-block;
-  position: relative;
   top: 0;
-  left: 0;
+  left: 100px;
+  padding: 0.2em !important;
 }
 
 .fixed  .site-logo {
@@ -1354,8 +1368,8 @@ object {
   .site-logo-box {
     display: inline-block;
     position: relative;
+    float: center;
     top: 0;
-    left: 0;
   }
 
   .site-logo {
