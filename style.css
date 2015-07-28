@@ -881,6 +881,11 @@ article.page {
   text-decoration: underline;
 }
 
+.entry-footer a:hover, .entry-footer a:focus { 
+  color: #39B54A;
+  text-decoration: underline;
+}
+
 .single-post .entry-footer, .page .entry-footer { 
   background-color: white;
   color: #404040;
@@ -891,14 +896,15 @@ article.page {
   text-decoration: underline;
 }
 
-.single-post .entry-footer a:hover, .page .entry-footer a:hover{ 
+.single-post .entry-footer a:hover, .page .entry-footer a:hover { 
   color: #912E47;
   text-decoration: underline;
 }
 
 .single-post .entry-header a:hover, .single-post .entry-header a:focus, 
-.entry-footer a:hover, .entry-footer a:focus,
-.page .entry-header a:hover, .page .entry-header a:focus{
+.single-post .entry-footer a:hover, .single-post .entry-footer a:focus,
+.sticky .entry-footer a:hover, .sticky .entry-footer a:focus,
+.page .entry-header a:hover, .page .entry-header a:focus {
   color: #912E47;
 }
 
@@ -999,6 +1005,7 @@ article.page {
 .post-single .entry-content img.attachment-post-thumb {
   width: 100% !important;
   height: auto !important;
+  margin-bottom: -0.5em;
 }
 
 .sticky .entry-footer {
@@ -1006,7 +1013,6 @@ article.page {
   color: white;
   padding: 0.5em;
   text-align: right;
-  margin-top: -0.5em;
 }
 
 .sticky .entry-meta {
@@ -1035,7 +1041,8 @@ article.page {
 }
 
 .sticky .entry-meta:hover, 
-.sticky .entry-meta:focus {
+.sticky .entry-meta:focus,
+.date-big:hover {
   background-color: #226D2C;
 }
 
