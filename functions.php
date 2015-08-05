@@ -194,3 +194,14 @@ function new_excerpt_more( $more ) {
   return '... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'your-text-domain' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+function the_post_thumbnail_caption() {
+  global $post;
+
+  $thumbnail_id    = get_post_thumbnail_id($post->ID);
+  $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+  if ($thumbnail_image && isset($thumbnail_image[0])) {
+    echo '<div class="featured-caption">'.$thumbnail_image[0]->post_excerpt.'</div>';
+  }
+}

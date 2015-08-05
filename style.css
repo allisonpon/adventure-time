@@ -1345,6 +1345,13 @@ figcaption {
   font-size: smaller;
 }
 
+.featured-caption {
+  font-size: smaller;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 ## Screen size adjustments
 --------------------------------------------------------------*/
