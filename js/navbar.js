@@ -6,6 +6,7 @@
 ( function( $ ) {
 
   function bindScroll() {
+    $('.header-box').style("height", "100vh");
     if ( $('.site-branding').length < 1 ) {
       $('.main-navigation').addClass('fixed');
       $('body').addClass('padded-body');
@@ -29,15 +30,14 @@
            $('.main-navigation').removeClass('fixed');
            $('body').removeClass('padded-body');
          }
-      })
+      });
     }
   }
 
   bindScroll();
 
-  $(window).bind('resize', function(){
+  $(window).bind('resize', function() {
     bindScroll();
-    $(".header-box").style("height", "100vh");
   });
 
 } )( jQuery );
