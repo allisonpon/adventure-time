@@ -163,7 +163,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( esc_html__( '%s', 'adventure-time' ), single_cat_title( '', false ) );
+		$title = sprintf( esc_html__( 'Category: %s', 'adventure-time' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
 		$title = sprintf( esc_html__( 'Tag: %s', 'adventure-time' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
@@ -244,6 +244,24 @@ function the_archive_description( $before = '', $after = '' ) {
 }
 endif;
 
+if ( ! function_exists( 'the_category_title' ) ) :
+/**
+ * Shim for `the_category_title()`.
+ *
+ * Display the category title based on the queried object.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ *
+ * @param string $before Optional. Content to prepend to the title. Default empty.
+ * @param string $after  Optional. Content to append to the title. Default empty.
+ */
+function the_category_title( $before = '', $after = '' ) {
+  $title = sprintf( esc_html__( '%s', 'adventure-time' ), single_cat_title( '', false ) );
+  if ( ! empty( $title ) ) {
+    echo $before . $title . $after;  // WPCS: XSS OK.
+  }
+}
+endif;
 /**
  * Returns true if a blog has more than 1 category.
  *

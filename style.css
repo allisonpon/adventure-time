@@ -1352,6 +1352,12 @@ figcaption {
   text-align: center;
 }
 
+.category-galleries .featured-caption {
+  opacity: 0;
+  height: 0;
+  margin-top: 0.5em;
+}
+
 /*--------------------------------------------------------------
 ## Screen size adjustments
 --------------------------------------------------------------*/
