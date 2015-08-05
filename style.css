@@ -1337,6 +1337,14 @@ object {
   margin-top: 66px;
 }
 
+.sfsiplus_norm_row.sfsi_plus_wDiv {
+  width: 100% !important;
+}
+
+figcaption {
+  font-size: smaller;
+}
+
 /*--------------------------------------------------------------
 ## Screen size adjustments
 --------------------------------------------------------------*/

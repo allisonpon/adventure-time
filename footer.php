@@ -16,7 +16,8 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'adventure-time' ) ); ?>"><?php printf( esc_html__( 'Powered by %s', 'adventure-time' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Made with &hearts; by %1$s', 'adventure-time' ), 'Allison' ); ?>
-		</div><!-- .site-info -->
+<!-- 		  <a href="http://www.greengeeks.com" title="Web Hosting"><img src="http://www.greengeeks.com/greentags/greengeeks_hosted_120x60.gif" border="0"></a>
+ -->    </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
