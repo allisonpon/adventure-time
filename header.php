@@ -26,7 +26,7 @@
 		<?php if ( is_front_page() && is_home()) : ?>
       <div class="site-branding">
         <?php if ( get_header_image() ) : ?>
-          <div class="header-box" data-parallax="scroll" data-image-src="<?php header_image(); ?>">
+          <div class="header-box" data-parallax="scroll" data-image-src="<?php header_image(); ?>" data-bleed="25">
             <div class="header-text">
               <h1 class="site-description"><?php bloginfo( 'description' ); ?></h1>
               <div class="location-box">
