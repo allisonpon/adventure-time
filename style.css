@@ -1358,6 +1358,43 @@ figcaption {
   margin-top: 0.5em;
 }
 
+#secondary {
+  background-color: #88D392;
+  height: 48px;
+}
+
+#secondary div#sfsi_holder.sfsi_plus_holders {
+  height: auto !important;
+  float: none !important;
+}
+
+#secondary .widget {
+  margin: 0 0 0.5em;
+}
+
+#secondary div.sfsiplus_norm_row.sfsi_plus_wDiv {
+  position: relative !important;
+}
+
+#secondary div.sfsi_plus_widget {
+  min-height: 0px !important;
+}
+#secondary div.sfsi_plus_wicons {
+  margin-bottom: 0px !important;
+  vertical-align: bottom;
+}
+
+aside.widget_search {
+  position: absolute;;
+  bottom: 0px;
+  left: 0.5em;
+}
+
+aside.sfsi_plus {
+  position: absolute;
+  bottom: 0px;
+  right: 0.5em;
+}
 /*--------------------------------------------------------------
 ## Screen size adjustments
 --------------------------------------------------------------*/
@@ -1415,5 +1452,11 @@ figcaption {
 
   .site-branding .site-location {
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  aside.sfsi_plus {
+    bottom: 5px;
   }
 }
