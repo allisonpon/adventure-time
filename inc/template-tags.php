@@ -163,7 +163,7 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( esc_html__( 'Category: %s', 'adventure-time' ), single_cat_title( '', false ) );
+		$title = sprintf( esc_html__( '%s', 'adventure-time' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
 		$title = sprintf( esc_html__( 'Tag: %s', 'adventure-time' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
