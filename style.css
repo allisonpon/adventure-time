@@ -921,7 +921,7 @@ article.page {
 }
 
 .entry-content img.attachment-post-thumb {
-  height: 200px;
+  max-height: 200px;
   width: auto;
 }
 
@@ -1384,6 +1384,13 @@ figcaption {
   vertical-align: bottom;
 }
 
+.centered-images {
+  text-align: center;
+}
+
+.centered-images figure {
+  display: inline-block;
+}
 aside.widget_search {
   position: absolute;;
   bottom: 0px;
