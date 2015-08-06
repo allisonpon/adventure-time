@@ -920,6 +920,10 @@ article.page {
   color: #912E47;
 }
 
+.sticky .entry-content img.attachment-post-thumb {
+  max-height: 100%;
+}
+
 .entry-content img.attachment-post-thumb {
   max-height: 200px;
   width: auto;
