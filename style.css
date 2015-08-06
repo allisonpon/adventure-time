@@ -920,7 +920,8 @@ article.page {
   color: #912E47;
 }
 
-.sticky .entry-content img.attachment-post-thumb {
+.sticky .entry-content img.attachment-post-thumb,
+.post-single .entry-content img.attachment-post-thumb {
   max-height: 100%;
 }
 
@@ -1395,6 +1396,11 @@ figcaption {
 .centered-images figure {
   display: inline-block;
 }
+
+.centered-images .wp-caption {
+  margin-bottom: 0em;
+}
+
 aside.widget_search {
   position: absolute;;
   bottom: 0px;
