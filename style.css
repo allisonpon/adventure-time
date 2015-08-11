@@ -922,7 +922,7 @@ article.page {
 
 .sticky .entry-content img.attachment-post-thumb,
 .post-single .entry-content img.attachment-post-thumb {
-  max-height: 100%;
+  max-height: none;
 }
 
 .entry-content img.attachment-post-thumb {
@@ -974,6 +974,9 @@ article.page {
 .sticky .entry-title {
   display: inline-block;
   margin: 0em 0em 0em 1em;
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 10px;
+  padding: 0 .5em;
 }
 
 .sticky .entry-content {

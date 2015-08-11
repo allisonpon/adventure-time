@@ -6,7 +6,9 @@
 ( function( $ ) {
 
   function bindScroll() {
-    $('.header-box').style("height", "100vh");
+    console.log($('.header-box'));
+    window.a = $('.header-box');
+    $('.header-box').css("height", "100vh");
     if ( $('.site-branding').length < 1 ) {
       $('.main-navigation').addClass('fixed');
       $('body').addClass('padded-body');
