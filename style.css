@@ -1356,7 +1356,7 @@ figcaption {
   text-align: center;
 }
 
-.category-galleries .featured-caption {
+.category-galleries:not(.category-travel-journal) .featured-caption {
   opacity: 0;
   height: 0;
   margin-top: 0.5em;
